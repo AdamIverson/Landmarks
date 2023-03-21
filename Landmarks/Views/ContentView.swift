@@ -11,21 +11,30 @@ struct ContentView: View {
     var body: some View {
         VStack {
             MapView()
+                .padding([.top, .leading, .trailing], -12.0)
+                .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
             VStack {
                 Text("horsenanny")
                     .font(.subheadline)
                     .foregroundColor(.mint)
             }
-            CircleImage()
+            
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.mint)
+            Divider()
+                .frame(height: 100)
             Text("Landmarks")
                 .font(.largeTitle)
                 .foregroundColor(.purple)
+            Spacer()
         }
         .padding()
+        
     }
 }
 
