@@ -10,9 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("horsenanny")
-                .font(.subheadline)
-                .foregroundColor(.mint)
+            MapView()
+                .frame(height: 300)
+            VStack {
+                Text("horsenanny")
+                    .font(.subheadline)
+                    .foregroundColor(.mint)
+            }
+            CircleImage()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.mint)
